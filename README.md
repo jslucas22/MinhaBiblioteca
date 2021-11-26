@@ -6,6 +6,9 @@ Matéria -> Sistemas Operacionais II
 ### - instalar o servidor web Tomcat ou Apache
 ### - instalar o servidor Java ou PHP
 ### - instalar um banco de dados a sua escolha
-### - Criar uma aplicação simples com conexão com o banco de dados do servidor configurado
 
-```obs: Exercer as tarefas em uma distribuição Linux
+```php
+ echo "Criar uma aplicação simples com conexão com o banco de dados do servidor configurado"
+ echo "obs: Exercer as tarefas em uma distribuição Linux"
+ ```
+ 
