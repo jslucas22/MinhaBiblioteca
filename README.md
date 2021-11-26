@@ -8,7 +8,7 @@ Matéria -> Sistemas Operacionais II
 ### - instalar um banco de dados a sua escolha
 
 ```php
- echo "Criar uma aplicação simples com conexão com o banco de dados do servidor configurado"
+ echo "Criar uma aplicação simples em php com que terá conexão com o banco de dados"
  echo "obs: Exercer as tarefas em uma distribuição Linux"
  ```
  
