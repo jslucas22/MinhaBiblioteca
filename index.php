@@ -41,18 +41,18 @@
             <div class="wrap-login100 p-t-50 p-b-90">
                 <form class="login100-form validate-form flex-sb flex-w">
                     <span class="login100-form-title p-b-51">
-                        Login
+                        Informe suas credenciais
                     </span>
 
 
-                    <div class="wrap-input100 validate-input m-b-16" data-validate="Username is required">
-                        <input class="input100" type="text" name="username" placeholder="Username">
+                    <div class="wrap-input100 validate-input m-b-16" data-validate="Informe o Usuário">
+                        <input class="input100" type="text" name="usuario" placeholder="Usuário">
                         <span class="focus-input100"></span>
                     </div>
 
 
-                    <div class="wrap-input100 validate-input m-b-16" data-validate="Password is required">
-                        <input class="input100" type="password" name="pass" placeholder="Password">
+                    <div class="wrap-input100 validate-input m-b-16" data-validate="Informe a Senha">
+                        <input class="input100" type="password" name="senha" placeholder="Senha">
                         <span class="focus-input100"></span>
                     </div>
 
@@ -60,7 +60,7 @@
                         <div class="contact100-form-checkbox">
                             <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
                             <label class="label-checkbox100" for="ckb1">
-                                Remember me
+                                Lembrar-me
                             </label>
                         </div>
 
@@ -68,7 +68,7 @@
 
                     <div class="container-login100-form-btn m-t-17">
                         <button class="login100-form-btn">
-                            Login
+                            Acessar
                         </button>
                     </div>
 
