@@ -2,7 +2,7 @@
 session_start();
 
 //# Incluir arquivo de configuração
-include('');
+include('conexao.php');
 
 //# redireciona o usuario para o index caso o usuario e senha nao forem informados
 if (empty($_POST['usuario']) || empty($_POST['senha'])) {
@@ -10,16 +10,25 @@ if (empty($_POST['usuario']) || empty($_POST['senha'])) {
     exit();
 }
 
-$usuario =  mysql_real_escape_string($conexao, $_POST['usuario']);
-$senha = mysql_real_escape_string($conexao, $_POST['senha']);
+//# Obtendo o usuario que foi obtido via POST
+$usuario =  mysqli_real_escape_string($conexao, $_POST['usuario']);
 
-//# Select Query
+//# Obtendo a senha que foi obtida via POST e codificando-a em base64
+$senha = mysqli_real_escape_string($conexao, $_POST['senha']);
 
-//# Query Result
+//# Buscando o usuario
+$sSQL = "SELECT USUARIO FROM USUARIOS WHERE USUARIO = '{$usuario}' and senha = base64_encode('{$senha}')";
 
-//# Quantidade de Linhas Retornadas
+//# Retornando o numero de linhas da query executada
+$linha = mysqli_num_rows(mysqli_query($conexao, $sSQL));
 
-//# Verificar se existe alguma linha (caso sim, usuario existe, caso não, usuário inexistente )
-
-//# usuário existe ? -> redirecionar para a dashboard
-//# usuário não existe? -> redirecionar para o index
+//# Redireciona o usuário para dashboard caso exista
+if ($row > 0) {
+    $_SESSION['usuario'] = $usuario;
+    header('Location: /Dashboard/index.php');
+    exit();    
+} else {
+    $_SESSION['nao_autenticado'] = true;
+    header('Location: index.php');
+    exit();
+}
