@@ -1,5 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+
+session_start();
+
+//# Usuario está na sessão ?
+//# Não ? ~> Redirecione para o index.
+
+?>
+
+<html lang="pt-BR">
 
 <head>
 
