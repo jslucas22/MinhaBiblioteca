@@ -9,8 +9,7 @@ Matéria -> Sistemas Operacionais II
 
 #
 
-| Servidor WEB | Tecnologia | Banco de Dados | Servidor | Distro | ----------|:-------------:|------:| |
-Apache | PHP | SQL Server | Google Cloud VPS | Debian |
+| Servidor WEB | Tecnologia | Banco de Dados | Servidor | Distro | ----------|:-------------:|:-------------:|:-------------:| | Apache | PHP | SQL Server | Google Cloud VPS | Debian |
 
 ```php
  echo "Criar uma aplicação simples em php com que terá conexão com o banco de dados"
