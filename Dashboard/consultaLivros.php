@@ -17,7 +17,7 @@ session_start();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dashboard</title>
+    <title>Consulta de Livros</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -46,7 +46,7 @@ session_start();
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -76,7 +76,7 @@ session_start();
             </div>
 
             <!-- Nav Item - Livros -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="consultaLivros.php">
                     <i class="fas fa-fw fa-book"></i>
                     <span>Livros</span></a>
@@ -176,36 +176,83 @@ session_start();
                                 </a>
                             </div>
                         </li>
-
                     </ul>
-
                 </nav>
                 <!-- End of Topbar -->
 
-                <!-- Content Row -->
-                <div class="row">
-                    <div class="col-lg-6 mb-4" />
-                    <div class="col-lg-6 mb-4"> </div>
+                <div class="container-fluid">
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-">
+                            <h6 class="m-0 font-weight-bold text-primary">Livros</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Descrição</th>
+                                            <th>Editora</th>
+                                            <th>Ano</th>
+                                            <th>Autor</th>
+                                            <th>Descrição</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Descrição</th>
+                                            <th>Editora</th>
+                                            <th>Ano</th>
+                                            <th>Autor</th>
+                                            <th>Descrição</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>BloodLycan</td>
+                                            <td>Amanda Scopel</td>
+                                            <td>2021</td>
+                                            <td>Amanda Scople</td>
+                                            <td>Recomendo Muito</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Churchill - Uma Vida</td>
+                                            <td>Leya</td>
+                                            <td>2016</td>
+                                            <td>Martim Gilbert</td>
+                                            <td>Um grande livro</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Teste</td>
+                                            <td>Teste Teste</td>
+                                            <td>2077</td>
+                                            <td>Teste Teste Teste</td>
+                                            <td>Onhé, Onhé</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+                <!-- /.container-fluid -->
 
             </div>
-            <!-- /.container-fluid -->
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; MinhaBiblioteca</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
 
         </div>
-        <!-- End of Main Content -->
-
-        <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; MinhaBiblioteca</span>
-                </div>
-            </div>
-        </footer>
-        <!-- End of Footer -->
-
-    </div>
-    <!-- End of Content Wrapper -->
+        <!-- End of Content Wrapper -->
 
     </div>
     <!-- End of Page Wrapper -->
@@ -245,11 +292,11 @@ session_start();
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/demo/datatables-demo.js"></script>
 
 </body>
 
