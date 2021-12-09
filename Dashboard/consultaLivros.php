@@ -184,7 +184,7 @@ session_start();
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-">
-                            <h6 class="m-0 font-weight-bold text-primary">Livros</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Consulta de Livros</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
