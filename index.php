@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
 <?php
 
+require_once "classes/conexao.php";
 
 ?>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
 
 <head>
     <title>Login</title>
@@ -39,7 +40,7 @@
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100 p-t-50 p-b-90">
-                <form class="login100-form validate-form flex-sb flex-w">
+                <form class="login100-form validate-form flex-sb flex-w" action="classes/auth/login.php" method="POST">
                     <span class="login100-form-title p-b-51">
                         Informe suas credenciais
                     </span>
