@@ -2,8 +2,15 @@
 
 session_start();
 
-//# Usuario está na sessão ?
-//# Não ? ~> Redirecione para o index.
+//-------------------------------------------------------------->
+//#~> Checando se o usuário está na sessão
+//-------------------------------------------------------------->
+
+if (!isset($_SESSION['usuario'])) {
+    header('location: ../index.php');
+}
+
+//-------------------------------------------------------------->
 
 ?>
 
