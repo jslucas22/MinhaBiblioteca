@@ -182,6 +182,42 @@ session_start();
                 </nav>
                 <!-- End of Topbar -->
 
+                <div class="container-fluid">
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-">
+                            <h6 class="m-0 font-weight-bold text-primary">Cadastro de Livros</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="descricaoLivro">Descrição:</label>
+                                <input type="text" class="form-control" id="descricaoLivro">
+                            </div>
+                            <div class="form-group">
+                                <label for="editoraLivro">Editora:</label>
+                                <input type="text" class="form-control" id="editoraLivro">
+                            </div>
+                            <div class="form-group">
+                                <label for="anoLivro">Ano Publicação:</label>
+                                <input type="number" class="form-control" id="anoLivro" maxlength="4">
+                            </div>
+                            <div class="form-group">
+                                <label for="autorLivro">Autor:</label>
+                                <input type="text" class="form-control" id="autorLivro">
+                            </div>
+                            <div class="form-group">
+                                <label for="descricaoLivrvo">Descrição:</label>
+                                <input type="text" class="form-control" id="descricaoLivrvo">
+                            </div>
+                            <div class="form-group" style="text-align: right;">
+                                <button type="button" class="btn btn-danger">Limpar Campos</button>
+                                <button type="button" class="btn btn-primary">Gravar Dados</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Content Row -->
                 <div class="row">
                     <div class="col-lg-6 mb-4" />
