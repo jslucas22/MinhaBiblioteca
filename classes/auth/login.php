@@ -1,34 +1,47 @@
 <?php
+
 session_start();
 
-//# Incluir arquivo de configuração
-include('conexao.php');
+require_once "../conexao.php";
 
-//# redireciona o usuario para o index caso o usuario e senha nao forem informados
+//-------------------------------------------------------------->
+//#~> Obtém dados passados via POST
+//-------------------------------------------------------------->
+
+$usuario =  $_POST['usuario'];
+$senha   =  $_POST['senha'];
+
+//# Codifica as credenciais senha em base64
+$credenciais   =  base64_encode($usuario . ":" . $senha);
+
+//-------------------------------------------------------------->
+//#~> Checando entrada de dados
+//-------------------------------------------------------------->
+
 if (empty($_POST['usuario']) || empty($_POST['senha'])) {
     header('Location: index.php');
     exit();
 }
 
-//# Obtendo o usuario que foi obtido via POST
-$usuario =  mysqli_real_escape_string($conexao, $_POST['usuario']);
+//-------------------------------------------------------------->
+//#~> Buscando dados
+//-------------------------------------------------------------->
 
-//# Obtendo a senha que foi obtida via POST e codificando-a em base64
-$senha = mysqli_real_escape_string($conexao, $_POST['senha']);
+$conexao = Conexao::getConnection();
+$sSQL    = $conexao->query("SELECT USUARIO FROM USUARIO WHERE USUARIO = '{$usuario}' and senha = ('{$credenciais}')");
 
-//# Buscando o usuario
-$sSQL = "SELECT USUARIO FROM USUARIOS WHERE USUARIO = '{$usuario}' and senha = base64_encode('{$senha}')";
+$usuario = $sSQL->fetchAll();
 
-//# Retornando o numero de linhas da query executada
-$linha = mysqli_num_rows(mysqli_query($conexao, $sSQL));
+//-------------------------------------------------------------->
+//#~> Checando existencia do usuário
+//-------------------------------------------------------------->
 
-//# Redireciona o usuário para dashboard caso exista
-if ($row > 0) {
+if (!empty($usuario)) {
     $_SESSION['usuario'] = $usuario;
-    header('Location: /Dashboard/index.php');
-    exit();    
+    header('Location: ../../Dashboard/index.php');
+    exit();
 } else {
     $_SESSION['nao_autenticado'] = true;
-    header('Location: index.php');
+    header('Location:../../index.php');
     exit();
 }
