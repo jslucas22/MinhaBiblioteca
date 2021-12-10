@@ -47,7 +47,7 @@ require_once "classes/conexao.php";
 
 
                     <div class="wrap-input100 validate-input m-b-16" data-validate="Informe o Usuário">
-                        <input class="input100" type="text" name="usuario" placeholder="Usuário">
+                        <input class="input100" type="text" name="usuario" id="usuario" placeholder="Usuário">
                         <span class="focus-input100"></span>
                     </div>
 

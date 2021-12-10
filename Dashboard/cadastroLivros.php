@@ -1,14 +1,7 @@
 <?php
+require_once('../classes/auth/validar_login.php');
 
-session_start();
-
-//-------------------------------------------------------------->
-//#~> Checando se o usuário está na sessão
-//-------------------------------------------------------------->
-
-if (!isset($_SESSION['usuario'])) {
-    header('location: ../index.php');
-}
+$usuario = $_SESSION['usuario'];
 
 //-------------------------------------------------------------->
 
@@ -163,7 +156,7 @@ if (!isset($_SESSION['usuario'])) {
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{usuario}</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Olá, <?= current($usuario)[0] ?></span>
                                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
