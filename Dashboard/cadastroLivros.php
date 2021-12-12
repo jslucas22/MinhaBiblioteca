@@ -190,24 +190,24 @@ $usuario = $_SESSION['usuario'];
                         </div>
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="descricaoLivro">Descrição:</label>
-                                <input type="text" class="form-control" id="descricaoLivro">
+                                <label for="descricaoLivro">Nome Livro:</label>
+                                <input type="text" class="form-control" id="nome_livro">
                             </div>
                             <div class="form-group">
                                 <label for="editoraLivro">Editora:</label>
-                                <input type="text" class="form-control" id="editoraLivro">
+                                <input type="text" class="form-control" id="editora_livro">
                             </div>
                             <div class="form-group">
                                 <label for="anoLivro">Ano Publicação:</label>
-                                <input type="number" class="form-control" id="anoLivro" maxlength="4">
+                                <input type="number" class="form-control" id="ano_livro" maxlength="4">
                             </div>
                             <div class="form-group">
                                 <label for="autorLivro">Autor:</label>
-                                <input type="text" class="form-control" id="autorLivro">
+                                <input type="text" class="form-control" id="autor_livro">
                             </div>
                             <div class="form-group">
                                 <label for="descricaoLivrvo">Descrição:</label>
-                                <input type="text" class="form-control" id="descricaoLivrvo">
+                                <input type="text" class="form-control" id="descricao_livrvo">
                             </div>
                             <div class="form-group" style="text-align: right;">
                                 <button type="button" class="btn btn-danger">Limpar Campos</button>
