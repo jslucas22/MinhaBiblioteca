@@ -190,27 +190,27 @@ $usuario = $_SESSION['usuario'];
                         </div>
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="descricaoLivro">Nome Livro:</label>
+                                <label for="nome_livro">Nome Livro:</label>
                                 <input type="text" class="form-control" id="nome_livro">
                             </div>
                             <div class="form-group">
-                                <label for="editoraLivro">Editora:</label>
+                                <label for="editora_livro">Editora:</label>
                                 <input type="text" class="form-control" id="editora_livro">
                             </div>
                             <div class="form-group">
-                                <label for="anoLivro">Ano Publicação:</label>
-                                <input type="number" class="form-control" id="ano_livro" maxlength="4">
+                                <label for="ano_publicacao_livro">Ano Publicação:</label>
+                                <input type="number" class="form-control" id="ano_publicacao_livro" maxlength="4">
                             </div>
                             <div class="form-group">
-                                <label for="autorLivro">Autor:</label>
+                                <label for="autor_livro">Autor:</label>
                                 <input type="text" class="form-control" id="autor_livro">
                             </div>
                             <div class="form-group">
                                 <label for="descricaoLivrvo">Descrição:</label>
-                                <input type="text" class="form-control" id="descricao_livrvo">
+                                <input type="text" class="form-control" id="descricao_livro">
                             </div>
                             <div class="form-group" style="text-align: right;">
-                                <button type="button" class="btn btn-danger">Limpar Campos</button>
+                                <button type="button" class="btn btn-danger" id="limpar_campos">Limpar Campos</button>
                                 <button type="button" class="btn btn-primary">Gravar Dados</button>
 
                             </div>
@@ -269,6 +269,8 @@ $usuario = $_SESSION['usuario'];
             </div>
         </div>
     </div>
+
+    <script src="js/helper.js" type="text/javascript"></script>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
