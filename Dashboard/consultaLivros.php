@@ -1,10 +1,23 @@
 <?php
 
 require_once('../classes/auth/validar_login.php');
+require_once('../classes/conexao.php');
 
 $usuario = $_SESSION['usuario'];
 
 //-------------------------------------------------------------->
+
+$conexao = Conexao::getConnection();
+
+//-------------------------------------------------------------->
+//#~> Busca os livros
+//-------------------------------------------------------------->
+
+
+$sSQL = $conexao->query(
+    "SELECT NOME_LIVRO, EDITORA, ANO_PUBLICACAO, AUTOR, DESCRICAO
+     FROM   LIVRO WITH (NOLOCK) ORDER BY DATA_INSERCAO DESC"
+);
 
 ?>
 
@@ -194,42 +207,24 @@ $usuario = $_SESSION['usuario'];
                                         <tr>
                                             <th>Descrição</th>
                                             <th>Editora</th>
-                                            <th>Ano</th>
+                                            <th>Ano Publicação</th>
                                             <th>Autor</th>
                                             <th>Descrição</th>
                                         </tr>
                                     </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Descrição</th>
-                                            <th>Editora</th>
-                                            <th>Ano</th>
-                                            <th>Autor</th>
-                                            <th>Descrição</th>
-                                        </tr>
-                                    </tfoot>
                                     <tbody>
-                                        <tr>
-                                            <td>BloodLycan</td>
-                                            <td>Amanda Scopel</td>
-                                            <td>2021</td>
-                                            <td>Amanda Scople</td>
-                                            <td>Recomendo Muito</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Churchill - Uma Vida</td>
-                                            <td>Leya</td>
-                                            <td>2016</td>
-                                            <td>Martim Gilbert</td>
-                                            <td>Um grande livro</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Teste</td>
-                                            <td>Teste Teste</td>
-                                            <td>2077</td>
-                                            <td>Teste Teste Teste</td>
-                                            <td>Onhé, Onhé</td>
-                                        </tr>
+                                        <?php
+
+                                        while ($row = $livro = $sSQL->fetch()) {
+                                            echo "<tr>
+                                                 <td>"  . $row["NOME_LIVRO"]     .   "</td>" .
+                                                "<td>"  . $row["EDITORA"]        .   "</td>" .
+                                                "<td>"  . $row["ANO_PUBLICACAO"] .   "</td>" .
+                                                "<td>"  . $row["AUTOR"]          .   "</td>" .
+                                                "<td>"  . $row["DESCRICAO"]      .   "</td>" .
+                                                "</tr>";
+                                        }
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>
