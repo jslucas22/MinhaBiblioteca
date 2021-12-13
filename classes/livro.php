@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 require_once('conexao.php');
 
 class livro
@@ -35,26 +33,19 @@ class livro
     //#~> Insere os dados de um livro
     //-------------------------------------------------------------->
 
-    public static function inserirLivro()
+    public static function inserirLivro($nomeLivro, $editoraLivro, $anoPublicacaoLivro, $autorLivro, $descricaoLivro)
     {
-        $nomeLivro = isset($nome_livro) ? $nome_livro : '';
-        $editoraLivro = isset($editora) ? $editora : '';
-        $anoPublicacaoLivro = isset($ano_publicacao_livro) ? $ano_publicacao_livro : '';
-        $autorLivro = isset($autor_livro) ? $autor_livro : '';
-        $descricaoLivro = isset($descricao_livro) ? $descricao_livro : '';
-
         $sSQL = "INSERT INTO LIVRO ( 
                    NOME_LIVRO
                  , EDITORA
                  , ANO_PUBLICACAO
                  , AUTOR
                  , DESCRICAO
-                 , DATA_INSERCAO
                  ) 
                  VALUES (
                    '{$nomeLivro}'
                  , '{$editoraLivro}'
-                 , {$anoPublicacaoLivro}
+                 ,  {$anoPublicacaoLivro}
                  , '{$autorLivro}'
                  , '{$descricaoLivro}'
                  )";
