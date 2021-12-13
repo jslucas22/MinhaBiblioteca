@@ -12,24 +12,6 @@ class livro
     public static $descricao_livro = null;
 
     //-------------------------------------------------------------->
-    //#~> Buscar oslivros
-    //-------------------------------------------------------------->
-
-    public static function buscarLivro()
-    {
-        $conexao = Conexao::getConnection();
-        $sSQL = $conexao->query(
-            "SELECT NOME_LIVRO, EDITORA, ANO_PUBLICACAO, AUTOR, DESCRICAO
-             FROM   LIVRO WITH (NOLOCK) ORDER BY DATA_INSERCAO DESC"
-        );
-
-        $livro = $sSQL->fetchAll();
-        if (!empty($livro)) {
-            #...
-        }
-    }
-
-    //-------------------------------------------------------------->
     //#~> Insere os dados de um livro
     //-------------------------------------------------------------->
 
