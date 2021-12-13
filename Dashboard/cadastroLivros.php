@@ -182,41 +182,43 @@ $usuario = $_SESSION['usuario'];
                 </nav>
                 <!-- End of Topbar -->
 
-                <div class="container-fluid">
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-">
-                            <h6 class="m-0 font-weight-bold text-primary">Cadastro de Livros</h6>
-                        </div>
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label for="nome_livro">Nome Livro:</label>
-                                <input type="text" class="form-control" id="nome_livro">
+                <form action="../classes/inserirLivro.php" method="POST">
+                    <div class="container-fluid">
+                        <!-- DataTales Example -->
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-">
+                                <h6 class="m-0 font-weight-bold text-primary">Cadastro de Livros</h6>
                             </div>
-                            <div class="form-group">
-                                <label for="editora_livro">Editora:</label>
-                                <input type="text" class="form-control" id="editora_livro">
-                            </div>
-                            <div class="form-group">
-                                <label for="ano_publicacao_livro">Ano Publicação:</label>
-                                <input type="number" class="form-control" id="ano_publicacao_livro" maxlength="4">
-                            </div>
-                            <div class="form-group">
-                                <label for="autor_livro">Autor:</label>
-                                <input type="text" class="form-control" id="autor_livro">
-                            </div>
-                            <div class="form-group">
-                                <label for="descricaoLivrvo">Descrição:</label>
-                                <input type="text" class="form-control" id="descricao_livro">
-                            </div>
-                            <div class="form-group" style="text-align: right;">
-                                <button type="button" class="btn btn-danger" id="limpar_campos">Limpar Campos</button>
-                                <button type="button" class="btn btn-primary">Gravar Dados</button>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="nome_livro">Nome Livro:</label>
+                                    <input type="text" class="form-control" name="nome_livro">
+                                </div>
+                                <div class="form-group">
+                                    <label for="editora_livro">Editora:</label>
+                                    <input type="text" class="form-control" name="editora_livro">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ano_publicacao_livro">Ano Publicação:</label>
+                                    <input type="number" class="form-control" name="ano_publicacao_livro" maxlength="4">
+                                </div>
+                                <div class="form-group">
+                                    <label for="autor_livro">Autor:</label>
+                                    <input type="text" class="form-control" name="autor_livro">
+                                </div>
+                                <div class="form-group">
+                                    <label for="descricaoLivrvo">Descrição:</label>
+                                    <input type="text" class="form-control" name="descricao_livro">
+                                </div>
+                                <div class="form-group" style="text-align: right;">
+                                    <button type="button" class="btn btn-danger" id="limpar_campos">Limpar Campos</button>
+                                    <button type="submit" class="btn btn-primary">Gravar Dados</button>
 
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
 
                 <!-- Content Row -->
                 <div class="row">
