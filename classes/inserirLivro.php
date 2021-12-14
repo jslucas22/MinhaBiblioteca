@@ -19,4 +19,6 @@ $descricaoLivro = strtoupper($_POST['descricao_livro']);
 
 $livro = Livro::inserirLivro($nomeLivro, $editoraLivro, $anoPublicacaoLivro, $autorLivro, $descricaoLivro);
 
+Header("Location: ../Dashboard/cadastroLivros.php");
+
 //-------------------------------------------------------------->
