@@ -5,7 +5,7 @@
 //-------------------------------------------------------------->
 
 define('DB_HOST', 'database_host');
-define('DB_USER', 'datanase_username');
+define('DB_USER', 'database_username');
 define('DB_PASSWORD', 'database_password');
 define('DB_NAME', 'database_catalog');
 define('DB_DRIVER', 'sqlsrv');
