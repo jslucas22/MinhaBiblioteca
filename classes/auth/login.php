@@ -3,6 +3,7 @@
 session_start();
 
 require_once "../conexao.php";
+require_once "../inserirLogLogin.php";
 
 //-------------------------------------------------------------->
 //#~> Obtém dados passados via POST
@@ -38,10 +39,13 @@ $usuario = $sSQL->fetchAll();
 
 if (!empty($usuario)) {
     $_SESSION['usuario'] = $usuario;
+    $_SESSION['nao_autenticado'] = false;
     header('Location: ../../Dashboard/index.php');
+    inserirLogLogin::insertLog();
     exit();
 } else {
     $_SESSION['nao_autenticado'] = true;
     header('Location:../../index.php');
+    inserirLogLogin::insertLog();
     exit();
 }
