@@ -4,10 +4,10 @@
 //#~> Constantes
 //-------------------------------------------------------------->
 
-define('DB_HOST', '192.168.0.100');
-define('DB_USER', 'jslucas');
-define('DB_PASSWORD', 'tamarindo544');
-define('DB_NAME', 'BANCO_FATEC');
+define('DB_HOST', 'database_host');
+define('DB_USER', 'datanase_username');
+define('DB_PASSWORD', 'database_password');
+define('DB_NAME', 'database_catalog');
 define('DB_DRIVER', 'sqlsrv');
 
 //-------------------------------------------------------------->
